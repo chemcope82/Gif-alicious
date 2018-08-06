@@ -47,16 +47,19 @@ function showGif(){
         console.log(results);
 
         for (var i=0; i < results.length; i++) {
-            var gifDiv = $("<div>");
+            var gifDiv = $("<div class = 'imageDiv'>");
             var urlStill = results[i].images.fixed_height_still.url;
             var urlAnimated = results[i].images.fixed_height.url;
             var rating = results[i].rating;
             var gifImage = $("<img>");
+            var gifRating = $("<p style = 'text-align: center'>");
             gifImage.attr("data-still", urlStill);
             gifImage.attr("data-animate", urlAnimated);
             gifImage.attr("data-state", "still");
             gifImage.attr("src", urlStill);
             gifImage.addClass("gif");
+            gifRating.text("Rating: " + rating);
+            gifDiv.append(gifRating);
             gifDiv.append(gifImage);
             $("#images").append(gifDiv);
         }

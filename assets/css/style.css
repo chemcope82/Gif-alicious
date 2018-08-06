@@ -1,7 +1,8 @@
 .button {
     margin: 10px;
 }
-.gif {
+.imageDiv {
     float: left;
     margin: 10px;
+    border: 2px solid gray;
 }
