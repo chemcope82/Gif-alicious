@@ -35,7 +35,7 @@ $("#addBand").on("click", function(event) {
 
 function showGif(){
     var band = $(this).attr("data-band");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + band + "&api_key=" + apiKey + "&limit=10&rating=pg";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + band + "&api_key=" + apiKey + "&limit=10&rating=pg";
     console.log(queryURL);
     currentBand.empty();
 
